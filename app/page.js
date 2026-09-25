@@ -49,6 +49,33 @@ const industries = [
   "Hospitality",
 ];
 
+const leaders = [
+  {
+    name: "Rajesh Bakshi",
+    role: "Managing Director",
+    image: "/assets/rajesh-bakshi.webp",
+    width: 580,
+    height: 980,
+    bio: "Former officer with the Directorate of Enforcement, Ministry of Finance, and later senior management in a leading corporate house. More than 37 years across law enforcement, corporate affairs, liaison, vigilance, investigation and legal compliance.",
+  },
+  {
+    name: "Mayank Nandan",
+    role: "Executive Director",
+    image: "/assets/mayank-nandan.webp",
+    width: 413,
+    height: 531,
+    bio: "Over 18 years in investment banking and finance, including Reliance Capital, HDFC Bank and Axis Bank. He leads debt syndication, project finance, structured finance and financial crisis management.",
+  },
+  {
+    name: "Anupam Dighe",
+    role: "Managing Partner, India Law Alliance",
+    image: "/assets/anupam-dighe.webp",
+    width: 900,
+    height: 1031,
+    bio: "Managing Partner of India Law Alliance, the firm we work with on litigation and arbitration. Advocate of the Bombay High Court and Solicitor of England & Wales, focused on commercial disputes and indirect tax.",
+  },
+];
+
 const steps = [
   ["Listen", "Understand the context, stakeholders and true nature of the mandate."],
   ["Analyse", "Build a clear, well-researched view of risk, opportunity and leverage."],
@@ -212,41 +239,27 @@ export default function Home() {
             <span>03</span>
             <p>Leadership</p>
           </div>
-          <div className="leadership-grid">
-            <div className="portrait-wrap reveal">
-              <div className="portrait-frame">
-                <Image
-                  src="/assets/leadership.webp"
-                  alt="Roger Bravo Advisors leadership"
-                  width={413}
-                  height={531}
-                  sizes="(max-width: 680px) 90vw, 38vw"
-                />
-              </div>
-              <span className="portrait-note">Experience when it matters most</span>
-            </div>
-            <div className="leadership-copy reveal">
-              <p className="eyebrow">Senior counsel, direct involvement</p>
-              <h2>Experience built across boardrooms, banks and government.</h2>
-              <p className="lead">
-                Roger Bravo’s leadership combines decades of experience in law enforcement,
-                corporate affairs, investment banking, finance, vigilance and legal compliance.
-              </p>
-              <div className="experience">
-                <div>
-                  <strong>37+</strong>
-                  <span>years across enforcement, corporate affairs and compliance</span>
+          <div className="leadership-intro reveal">
+            <p className="eyebrow">Senior counsel, direct involvement</p>
+            <h2>The people behind the mandate.</h2>
+          </div>
+          <div className="leaders">
+            {leaders.map((leader) => (
+              <article className="leader reveal" key={leader.name}>
+                <div className="leader-photo">
+                  <Image
+                    src={leader.image}
+                    alt={leader.name}
+                    width={leader.width}
+                    height={leader.height}
+                    sizes="(max-width: 680px) 90vw, 30vw"
+                  />
                 </div>
-                <div>
-                  <strong>18+</strong>
-                  <span>years across banking, investment and structured finance</span>
-                </div>
-              </div>
-              <p className="small">
-                Our Managing Director has also served as arbitrator in international matters
-                involving Indian and foreign companies.
-              </p>
-            </div>
+                <h3>{leader.name}</h3>
+                <p className="leader-role">{leader.role}</p>
+                <p>{leader.bio}</p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -283,14 +296,14 @@ export default function Home() {
               <br />
               that keeps you up at night.
             </h2>
-            <a className="contact-email" href="mailto:test@rogerbravo.com">
-              test@rogerbravo.com
+            <a className="contact-email" href="mailto:info@rogerbravo.com">
+              info@rogerbravo.com
             </a>
           </div>
           <div className="contact-details reveal">
             <div>
               <span>Email</span>
-              <a href="mailto:test@rogerbravo.com">test@rogerbravo.com</a>
+              <a href="mailto:info@rogerbravo.com">info@rogerbravo.com</a>
             </div>
             <div>
               <span>India office</span>
