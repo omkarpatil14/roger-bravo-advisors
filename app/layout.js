@@ -1,34 +1,44 @@
-import { DM_Sans, Manrope } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { SiteShell } from "./components/site-shell";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  weight: ["500", "600", "700"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata = {
-  title: "Roger Bravo Advisors — Clarity. Courage. Outcomes.",
+  title: {
+    default: "Roger Bravo Advisors — Clarity. Courage. Outcomes.",
+    template: "%s — Roger Bravo Advisors",
+  },
   description:
     "Roger Bravo Advisors provides strategic business advisory, crisis management, fundraising, legal strategy and corporate liaison across India and Dubai.",
 };
 
 export const viewport = {
-  themeColor: "#071a14",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${manrope.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   );
 }
