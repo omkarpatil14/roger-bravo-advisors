@@ -88,7 +88,7 @@ export default function AboutPage() {
         <div className="chapter-inner brand-block">
           <RevealOnScroll className="brand-logo">
             <Image
-              src="/assets/roger-bravo-logo-theme.png"
+              src="/assets/roger-bravo-logo.png"
               alt="Roger Bravo logo with a thumbs-up in Roger and a tick mark in Bravo"
               width={1800}
               height={437}

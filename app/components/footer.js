@@ -22,7 +22,7 @@ export function Footer() {
       <div className="footer-meta">
         <div>
           <div className="logo-plate">
-            <Image className="footer-logo" src="/assets/roger-bravo-logo-theme.png" alt="Roger Bravo Advisors" width={1800} height={437} />
+            <Image className="footer-logo" src="/assets/roger-bravo-logo.png" alt="Roger Bravo Advisors" width={1800} height={437} />
           </div>
           <p className="footer-tagline">{brandMarks.pronunciation}</p>
         </div>

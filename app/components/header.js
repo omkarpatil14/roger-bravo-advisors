@@ -46,7 +46,7 @@ export function Header() {
       <Link href="/" className="brand" data-cursor="Open" aria-current={pathname === "/" ? "page" : undefined}>
         <Image
           className="logo-mark"
-          src="/assets/roger-bravo-logo-theme.png"
+          src="/assets/roger-bravo-logo.png"
           alt="Roger Bravo Advisors"
           width={1800}
           height={437}
