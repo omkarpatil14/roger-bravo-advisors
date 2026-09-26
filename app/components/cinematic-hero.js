@@ -5,6 +5,13 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 
 const ease = [0.22, 0.8, 0.2, 1];
 
+const FLOW_PATHS = [
+  ["M-100 620 C 240 460, 520 760, 860 560 S 1380 380, 1560 520", "green"],
+  ["M-100 700 C 300 560, 600 820, 940 640 S 1400 480, 1560 600", "green"],
+  ["M-100 300 C 260 180, 560 420, 900 260 S 1360 120, 1560 240", "orange"],
+  ["M-100 780 C 360 680, 680 880, 1020 720 S 1420 600, 1560 700", "green"],
+];
+
 export function CinematicHero({
   eyebrow,
   title,
@@ -89,6 +96,26 @@ export function CinematicHero({
         <video ref={videoRef} className="hero-video" muted loop playsInline preload="none" aria-hidden="true" />
       ) : null}
       <div className="hero-shade" aria-hidden="true" />
+      <svg className="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="line-green" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stopColor="#1c8a45" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#1c8a45" stopOpacity="0.8" />
+            <stop offset="1" stopColor="#1c8a45" stopOpacity="0" />
+          </linearGradient>
+          <linearGradient id="line-orange" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stopColor="#e8750f" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#e8750f" stopOpacity="0.7" />
+            <stop offset="1" stopColor="#e8750f" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        {FLOW_PATHS.map(([d, tone], index) => (
+          <g key={d}>
+            <path className="flow-base" d={d} />
+            <path className={`flow flow-${index + 1}`} d={d} stroke={`url(#line-${tone})`} />
+          </g>
+        ))}
+      </svg>
       <motion.p className="hero-mark" style={reduce ? undefined : { y: markY }} aria-hidden="true">
         {watermark}
       </motion.p>
