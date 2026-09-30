@@ -29,6 +29,12 @@ export default function ContactPage() {
             <a className="contact-mail" href={`mailto:${contactCopy.email}`} data-cursor="Write">
               {contactCopy.email}
             </a>
+            <p className="eyebrow" style={{ marginTop: "2.4rem" }}>
+              Telephone
+            </p>
+            <a className="contact-mail" href={contactCopy.phoneHref} data-cursor="Call">
+              {contactCopy.phone}
+            </a>
           </RevealOnScroll>
           <RevealOnScroll className="offices" delay={0.1}>
             <div className="office-card">

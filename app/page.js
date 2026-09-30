@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <main id="main">
       <CinematicHero
-        video="/videos/home.mp4"
+        video="/videos/corporate-skyline.mp4"
         eyebrow={hero.eyebrow}
         title={hero.lines}
         lede={hero.lede}

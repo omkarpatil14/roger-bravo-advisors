@@ -2,6 +2,7 @@ import Image from "next/image";
 import {
   approach,
   brandMarks,
+  fund,
   manifesto,
   nameStory,
   principles,
@@ -134,6 +135,16 @@ export default function AboutPage() {
           </RevealOnScroll>
           <RevealOnScroll className="asym-copy" delay={0.1}>
             <p>{profile.body}</p>
+            <dl className="fund-facts">
+              <div>
+                <dt>Fund name</dt>
+                <dd>{fund.name}</dd>
+              </div>
+              <div>
+                <dt>SEBI AIF registration no.</dt>
+                <dd>{fund.registration}</dd>
+              </div>
+            </dl>
           </RevealOnScroll>
         </div>
         <RevealOnScroll className="chapter-inner" delay={0.05}>

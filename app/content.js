@@ -2,8 +2,14 @@ export const navItems = [
   ["About", "/about"],
   ["Services", "/services"],
   ["Leadership", "/leadership"],
+  ["Disclosures", "/disclosures"],
   ["Contact", "/contact"],
 ];
+
+export const fund = {
+  name: "ROGER BRAVO ALTERNATIVE INVESTMENT FUND",
+  registration: "IN/AIF2/21-22/0878",
+};
 
 export const hero = {
   eyebrow: "Business advisory · Crisis management",
@@ -318,6 +324,8 @@ export const contactCopy = {
   eyebrow: "Let’s talk",
   lines: ["Write to the firm."],
   email: "info@rogerbravo.com",
+  phone: "+91 22 79632312",
+  phoneHref: "tel:+912279632312",
   officeLabel: "India office",
   address: ["Office 113, Inspire Building,", "Bharat Nagar, BKC, Mumbai 400051"],
   mapHref:
@@ -326,3 +334,18 @@ export const contactCopy = {
     "https://maps.google.com/maps?q=Inspire+Building+Bharat+Nagar+BKC+Mumbai+400051&z=16&output=embed",
   presence: "India · Dubai",
 };
+
+export const disclosures = [
+  {
+    title: "Investor Charter",
+    file: "/documents/investor-charter.pdf",
+  },
+  {
+    title: "Grievance Redressal Mechanism",
+    file: "/documents/grievance-redressal-mechanism.pdf",
+  },
+  {
+    title: "Investor Complaints Data",
+    file: "/documents/investor-complaints-data.pdf",
+  },
+];
