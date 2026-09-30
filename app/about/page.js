@@ -24,7 +24,7 @@ export default function AboutPage() {
       <CinematicHero
         video="/videos/about.mp4"
         eyebrow={manifesto.eyebrow}
-        title={["We understand first.", "Then we move boldly."]}
+        title={["About the firm."]}
         lede={manifesto.lead}
         watermark="RB"
         size="md"
@@ -39,7 +39,7 @@ export default function AboutPage() {
           <RevealOnScroll>
             <p className="eyebrow">Our name</p>
             <h2 id="name-title" className="display display-md">
-              Two words. One promise.
+              The name.
             </h2>
           </RevealOnScroll>
           <RevealOnScroll className="asym-copy" delay={0.1}>
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <RevealOnScroll>
             <p className="eyebrow">{manifesto.label}</p>
             <h2 id="principles-title" className="display display-md">
-              Receive. Be bold. Deliver.
+              How we approach the work.
             </h2>
           </RevealOnScroll>
           <div className="principles">
@@ -98,7 +98,7 @@ export default function AboutPage() {
           <RevealOnScroll delay={0.1}>
             <p className="eyebrow">Our logo</p>
             <h2 id="logo-title" className="display display-sm">
-              A thumbs-up for the message received. A tick for the job done.
+              The mark.
             </h2>
             <p>{brandMarks.logo}</p>
           </RevealOnScroll>

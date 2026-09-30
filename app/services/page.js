@@ -16,7 +16,7 @@ export default function ServicesPage() {
       <CinematicHero
         video="/videos/services.mp4"
         eyebrow={expertise.label}
-        title={["Complex mandates.", "One trusted advisor."]}
+        title={["What we advise on."]}
         lede={expertise.body}
         size="md"
         watermark="05"
@@ -28,7 +28,7 @@ export default function ServicesPage() {
           <RevealOnScroll>
             <p className="eyebrow">Practice index</p>
             <h2 id="index-title" className="display display-md">
-              Open a practice to see the full scope.
+              The five practice areas.
             </h2>
           </RevealOnScroll>
           <RevealOnScroll className="asym-copy" delay={0.1}>
@@ -48,10 +48,10 @@ export default function ServicesPage() {
       <section className="chapter" aria-labelledby="services-cta">
         <div className="chapter-inner asym">
           <h2 id="services-cta" className="display display-md">
-            Bring us the challenge that keeps you up at night.
+            Write to us about a matter.
           </h2>
           <div className="asym-copy">
-            <MagneticButton href="/contact">Discuss your mandate</MagneticButton>
+            <MagneticButton href="/contact">Contact us</MagneticButton>
           </div>
         </div>
       </section>

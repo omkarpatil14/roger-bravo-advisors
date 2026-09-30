@@ -43,7 +43,7 @@ export function CinematicHero({
       started = true;
       node.src = video;
       node.play().catch(() => {});
-    }, 800);
+    }, 200);
     const onError = () => {
       node.hidden = true;
     };
@@ -99,14 +99,14 @@ export function CinematicHero({
       <svg className="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
           <linearGradient id="line-green" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#1c8a45" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#1c8a45" stopOpacity="0.8" />
-            <stop offset="1" stopColor="#1c8a45" stopOpacity="0" />
+            <stop offset="0" stopColor="#1b3054" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#1b3054" stopOpacity="0.75" />
+            <stop offset="1" stopColor="#1b3054" stopOpacity="0" />
           </linearGradient>
           <linearGradient id="line-orange" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#e8750f" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#e8750f" stopOpacity="0.7" />
-            <stop offset="1" stopColor="#e8750f" stopOpacity="0" />
+            <stop offset="0" stopColor="#a68445" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#a68445" stopOpacity="0.8" />
+            <stop offset="1" stopColor="#a68445" stopOpacity="0" />
           </linearGradient>
         </defs>
         {FLOW_PATHS.map(([d, tone], index) => (

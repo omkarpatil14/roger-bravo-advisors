@@ -18,6 +18,8 @@ import { IndustryRail } from "./components/industry-rail";
 import { MagneticButton } from "./components/magnetic-button";
 import { RevealOnScroll } from "./components/reveal-on-scroll";
 
+const homeServices = services.filter((service) => service.slug !== "litigation");
+
 export default function HomePage() {
   const years = new Date().getFullYear() - 2010;
 
@@ -32,7 +34,7 @@ export default function HomePage() {
         watermark="RB"
         actions={
           <>
-            <MagneticButton href="/contact">Discuss your mandate</MagneticButton>
+            <MagneticButton href="/contact">Contact us</MagneticButton>
             <Link className="text-link" href="/services" data-cursor="Read">
               {expertise.label}
             </Link>
@@ -50,17 +52,13 @@ export default function HomePage() {
           <div className="motion-marquee-track">
             {[0, 1].map((copy) => (
               <div className="motion-marquee-group" aria-hidden={copy === 1} key={copy}>
-                <span>Clarity in complexity</span>
-                <i />
                 <span>Business advisory</span>
                 <i />
                 <span>Fund raising</span>
                 <i />
                 <span>Crisis management</span>
                 <i />
-                <span>Legal strategy</span>
-                <i />
-                <span>Bold execution</span>
+                <span>Communications</span>
                 <i />
               </div>
             ))}
@@ -104,7 +102,7 @@ export default function HomePage() {
             </div>
             <div className="stat">
               <strong>
-                <CountUp to={services.length} />
+                <CountUp to={homeServices.length} />
               </strong>
               <span>Practice areas</span>
             </div>
@@ -124,7 +122,7 @@ export default function HomePage() {
           <RevealOnScroll>
             <p className="eyebrow">{expertise.label}</p>
             <h2 id="services-title" className="display display-md">
-              Complex mandates. One trusted advisor.
+              Our practice areas.
             </h2>
           </RevealOnScroll>
           <RevealOnScroll className="asym-copy" delay={0.1}>
@@ -132,7 +130,7 @@ export default function HomePage() {
           </RevealOnScroll>
         </div>
         <div className="chapter-inner service-preview">
-          {services.map((service, index) => (
+          {homeServices.map((service, index) => (
             <RevealOnScroll key={service.slug} delay={index * 0.05}>
               <Link className="service-row" href={`/services#${service.slug}`} data-cursor="Read">
                 <span className="num">0{index + 1}</span>
@@ -218,7 +216,7 @@ export default function HomePage() {
           <RevealOnScroll>
             <p className="eyebrow">{approach.label}</p>
             <h2 id="approach-title" className="display display-md">
-              We understand first. Then we move boldly.
+              How we work.
             </h2>
             <p style={{ marginTop: "2rem" }}>
               <Link className="text-link" href="/about#approach" data-cursor="Read">

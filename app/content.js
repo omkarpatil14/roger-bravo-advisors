@@ -7,9 +7,9 @@ export const navItems = [
 
 export const hero = {
   eyebrow: "Business advisory · Crisis management",
-  lines: ["When the stakes are high,", "move with clarity."],
+  lines: ["Business and", "financial advisory."],
   lede:
-    "We listen deeply, think decisively and act boldly—bringing senior strategic counsel to complex business, financial and legal challenges.",
+    "Roger Bravo Advisors advises institutions and businesses on new ventures, capital and financial matters.",
   meta: ["Est. 2010", "India · Dubai", "Scroll to discover"],
 };
 
@@ -17,7 +17,7 @@ export const manifesto = {
   label: "Why Roger Bravo",
   eyebrow: "Your message, well received.",
   lead: "“Roger” acknowledges that we have listened. “Bravo” is the courage to deliver an exceptional outcome.",
-  body: "Since 2010, Roger Bravo Advisors has helped institutions and businesses navigate new ventures, raise capital, manage legal and financial crises, and open doors across industries and markets.",
+  body: "Since 2010, Roger Bravo Advisors has helped institutions and businesses navigate new ventures, raise capital, manage financial crises, and open doors across industries and markets.",
 };
 
 export const vision =
@@ -73,19 +73,19 @@ export const principles = [
   },
   {
     mark: "B",
-    title: "Be bold",
-    body: "We apply experience, agility and resolve where ordinary answers fall short.",
+    title: "Consider",
+    body: "We look at the matter carefully, then set out a practical way forward.",
   },
   {
     mark: "✓",
-    title: "Deliver",
-    body: "We stay relentlessly focused on the mandate and the outcome that matters.",
+    title: "Follow through",
+    body: "We stay with the work until the agreed steps are complete.",
   },
 ];
 
 export const expertise = {
   label: "What we do",
-  body: "Cross-functional expertise, senior attention and an execution-first mindset—designed for situations where every decision counts.",
+  body: "Advice across business, finance and communications.",
 };
 
 export const services = [
@@ -300,23 +300,23 @@ export const leaders = [
 
 export const leadershipIntro = {
   eyebrow: "Senior counsel, direct involvement",
-  title: "The people behind the mandate.",
+  title: "The people who lead the firm.",
 };
 
 export const approach = {
   label: "How we work",
   eyebrow: "सह वीर्यम् करवावहै",
   steps: [
-    ["Listen", "Understand the context, stakeholders and true nature of the mandate."],
-    ["Analyse", "Build a clear, well-researched view of risk, opportunity and leverage."],
-    ["Strategise", "Shape the right path with commercial realism and regulatory insight."],
-    ["Execute", "Move decisively, coordinate closely and stay accountable to the outcome."],
+    ["Listen", "Understand the context, the people involved, and the matter itself."],
+    ["Analyse", "Review the facts, the risks, and the options."],
+    ["Plan", "Set out a practical path, including the regulatory points."],
+    ["Carry out", "Work through the agreed steps and keep the client informed."],
   ],
 };
 
 export const contactCopy = {
   eyebrow: "Let’s talk",
-  lines: ["Bring us the challenge", "that keeps you up at night."],
+  lines: ["Write to the firm."],
   email: "info@rogerbravo.com",
   officeLabel: "India office",
   address: ["Office 113, Inspire Building,", "Bharat Nagar, BKC, Mumbai 400051"],

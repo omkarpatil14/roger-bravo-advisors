@@ -3,9 +3,46 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  Anvil,
+  Building2,
+  ConciergeBell,
+  Construction,
+  Cog,
+  Cpu,
+  FlaskConical,
+  Landmark,
+  Pickaxe,
+  Plane,
+  RadioTower,
+  Shirt,
+  ShoppingBag,
+  Stethoscope,
+  Truck,
+  UtensilsCrossed,
+} from "lucide-react";
 import { industries } from "../content";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const ICONS = {
+  "Convergence Telecom": RadioTower,
+  Metals: Anvil,
+  "Natural Resources": Pickaxe,
+  Infrastructure: Construction,
+  Logistics: Truck,
+  "Textiles & Fashion": Shirt,
+  "Food, Beverages & Restaurants": UtensilsCrossed,
+  Hospitality: ConciergeBell,
+  Chemicals: FlaskConical,
+  "Healthcare & Pharmaceuticals": Stethoscope,
+  Finance: Landmark,
+  Aviation: Plane,
+  Technology: Cpu,
+  "Real Estate": Building2,
+  Retail: ShoppingBag,
+  Engineering: Cog,
+};
 
 export function IndustryRail() {
   const root = useRef(null);
@@ -44,17 +81,25 @@ export function IndustryRail() {
         <div className="rail-head">
           <p className="eyebrow">Industries served</p>
           <h2 id="industries-title" className="display display-md">
-            Sectors as diverse as the mandates.
+            Industries we have worked in.
           </h2>
         </div>
         <ol ref={track} className="rail-track">
-          {industries.map(([name, detail], index) => (
-            <li className="rail-item" key={name}>
-              <span className="num">{String(index + 1).padStart(2, "0")}</span>
-              <strong>{name}</strong>
-              {detail ? <em>{detail}</em> : null}
-            </li>
-          ))}
+          {industries.map(([name, detail], index) => {
+            const Icon = ICONS[name] || Building2;
+            return (
+              <li className="rail-item" key={name}>
+                <div className="rail-item-top">
+                  <span className="rail-icon" aria-hidden="true">
+                    <Icon strokeWidth={1.4} />
+                  </span>
+                  <span className="num">{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <strong>{name}</strong>
+                {detail ? <em>{detail}</em> : null}
+              </li>
+            );
+          })}
         </ol>
         <div className="rail-meter" aria-hidden="true">
           <span ref={bar} />

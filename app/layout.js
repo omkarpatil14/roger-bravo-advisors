@@ -4,7 +4,7 @@ import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["500"],
   variable: "--font-jakarta",
   display: "swap",
 });
@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    default: "Roger Bravo Advisors — Clarity. Courage. Outcomes.",
+    default: "Roger Bravo Advisors",
     template: "%s — Roger Bravo Advisors",
   },
   description:
@@ -25,7 +25,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#FFFFFF",
+  themeColor: "#F6F1E7",
   width: "device-width",
   initialScale: 1,
 };
