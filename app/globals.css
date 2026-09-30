@@ -1450,6 +1450,28 @@ main > .chapter:not(.tone-dark):nth-child(even) {
 }
 
 @media (max-width: 560px) {
+  .hero .eyebrow:has(.eyebrow-sep) {
+    display: grid;
+    grid-template-columns: 1.05rem minmax(0, max-content);
+    align-items: center;
+    column-gap: 0.55rem;
+    row-gap: 0.12rem;
+    width: fit-content;
+    max-width: 100%;
+    border-radius: 14px;
+    padding: 0.5rem 0.75rem 0.5rem 0.6rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+  }
+  .hero .eyebrow:has(.eyebrow-sep)::before {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 1.05rem;
+    align-self: center;
+  }
+  .hero .eyebrow-sep { display: none; }
+  .hero .eyebrow-part { grid-column: 2; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stat { padding: 1.4rem 0.8rem; }
   .stat:nth-child(odd) { padding-left: 0; }

@@ -120,7 +120,22 @@ export function CinematicHero({
         {watermark}
       </motion.p>
       <motion.div className="hero-copy" style={reduce ? undefined : { y: copyY }}>
-        {eyebrow ? <p className="eyebrow fade-in">{eyebrow}</p> : null}
+        {eyebrow ? (
+          <p className="eyebrow fade-in">
+            {String(eyebrow)
+              .split(" · ")
+              .map((part, index) => (
+                <span className="eyebrow-part" key={`${part}-${index}`}>
+                  {index > 0 ? (
+                    <span className="eyebrow-sep" aria-hidden="true">
+                      {" · "}
+                    </span>
+                  ) : null}
+                  {part}
+                </span>
+              ))}
+          </p>
+        ) : null}
         {titleHref ? (
           <a className="hero-title-link" href={titleHref} data-cursor="Write">
             {heading}
