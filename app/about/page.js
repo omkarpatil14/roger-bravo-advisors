@@ -2,7 +2,7 @@ import Image from "next/image";
 import {
   approach,
   brandMarks,
-  fund,
+  fundFacts,
   manifesto,
   nameStory,
   principles,
@@ -136,14 +136,12 @@ export default function AboutPage() {
           <RevealOnScroll className="asym-copy" delay={0.1}>
             <p>{profile.body}</p>
             <dl className="fund-facts">
-              <div>
-                <dt>Fund name</dt>
-                <dd>{fund.name}</dd>
-              </div>
-              <div>
-                <dt>SEBI AIF registration no.</dt>
-                <dd>{fund.registration}</dd>
-              </div>
+              {fundFacts.map(([label, value]) => (
+                <div key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
             </dl>
           </RevealOnScroll>
         </div>

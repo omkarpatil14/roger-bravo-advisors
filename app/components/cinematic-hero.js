@@ -128,7 +128,7 @@ export function CinematicHero({
                 <span className="eyebrow-part" key={`${part}-${index}`}>
                   {index > 0 ? (
                     <span className="eyebrow-sep" aria-hidden="true">
-                      {" · "}
+                      ·
                     </span>
                   ) : null}
                   {part}

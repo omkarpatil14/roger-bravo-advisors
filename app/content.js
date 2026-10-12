@@ -7,9 +7,16 @@ export const navItems = [
 ];
 
 export const fund = {
-  name: "ROGER BRAVO ALTERNATIVE INVESTMENT FUND",
+  trust: "ROGER BRAVO ALTERNATIVE INVESTMENT FUND",
+  scheme: "ROGER BRAVO SECURED DEVELOPMENT FUND",
   registration: "IN/AIF2/21-22/0878",
 };
+
+export const fundFacts = [
+  ["Trust name", fund.trust],
+  ["Scheme name", fund.scheme],
+  ["SEBI registration no.", fund.registration],
+];
 
 export const hero = {
   eyebrow: "Business advisory · Crisis management",

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { brandMarks, contactCopy, navItems, services } from "../content";
+import { brandMarks, contactCopy, fundFacts, navItems, services } from "../content";
 import { MagneticButton } from "./magnetic-button";
 
 export function Footer() {
@@ -57,6 +57,14 @@ export function Footer() {
           <p style={{ marginTop: "0.8rem" }}>{contactCopy.presence}</p>
         </div>
       </div>
+      <dl className="footer-fund">
+        {fundFacts.map(([label, value]) => (
+          <div key={label}>
+            <dt>{label}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
       <div className="footer-base">
         <p>© {year} Roger Bravo Advisors Pvt. Ltd.</p>
         <p>Business Advisory · Crisis Management</p>

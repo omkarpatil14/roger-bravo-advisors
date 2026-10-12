@@ -1,4 +1,4 @@
-import { disclosures, fund } from "../content";
+import { disclosures, fund, fundFacts } from "../content";
 import { CinematicHero } from "../components/cinematic-hero";
 import { RevealOnScroll } from "../components/reveal-on-scroll";
 
@@ -13,7 +13,7 @@ export default function DisclosuresPage() {
       <CinematicHero
         eyebrow="Investor documents"
         title={["Disclosures."]}
-        lede={`${fund.name}. SEBI AIF registration no. ${fund.registration}.`}
+        lede={`${fund.scheme}, a scheme of ${fund.trust}. SEBI registration no. ${fund.registration}.`}
         size="md"
         watermark="RB"
         meta={["Investor Charter", "Grievance redressal", "Complaints data"]}
@@ -26,6 +26,14 @@ export default function DisclosuresPage() {
             <h2 id="documents-title" className="display display-md">
               The three investor documents.
             </h2>
+            <dl className="fund-facts">
+              {fundFacts.map(([label, value]) => (
+                <div key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
           </RevealOnScroll>
           <div className="doc-list">
             {disclosures.map((document) => (

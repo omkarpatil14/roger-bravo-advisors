@@ -1,17 +1,17 @@
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Mulish } from "next/font/google";
 import { SiteShell } from "./components/site-shell";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["500"],
-  variable: "--font-jakarta",
+  weight: ["500", "600"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-const inter = Inter({
+const mulish = Mulish({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-mulish",
   display: "swap",
 });
 
@@ -32,7 +32,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${mulish.variable}`}>
       <body>
         <a className="skip-link" href="#main">
           Skip to content
