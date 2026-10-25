@@ -1,24 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { brandMarks, contactCopy, fundFacts, navItems, services } from "../content";
 import { MagneticButton } from "./magnetic-button";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  const showContactBand = pathname !== "/services";
 
   return (
-    <footer className="site-footer tone-dark">
-      <div className="footer-top">
-        <div>
-          <p className="eyebrow">{contactCopy.eyebrow}</p>
-          <h2 className="display display-md footer-cta">
-            {contactCopy.lines[0]} {contactCopy.lines[1]}
-          </h2>
+    <footer className={showContactBand ? "site-footer tone-dark" : "site-footer tone-dark is-compact"}>
+      {showContactBand ? (
+        <div className="footer-top">
+          <div>
+            <p className="eyebrow">{contactCopy.eyebrow}</p>
+            <h2 className="display display-md footer-cta">
+              {contactCopy.lines[0]} {contactCopy.lines[1]}
+            </h2>
+          </div>
+          <div>
+            <MagneticButton href="/contact">Contact us</MagneticButton>
+          </div>
         </div>
-        <div>
-          <MagneticButton href="/contact">Contact us</MagneticButton>
-        </div>
-      </div>
+      ) : null}
       <div className="footer-meta">
         <div>
           <div className="logo-plate">
@@ -48,25 +55,38 @@ export function Footer() {
           </nav>
         </div>
         <div>
-          <h3>{contactCopy.officeLabel}</h3>
+          <h3>Contact</h3>
           <p>
+            {contactCopy.company}
+            <br />
+            CIN {contactCopy.cin}
+          </p>
+          <p style={{ marginTop: "0.8rem" }}>
+            <a href={`mailto:${contactCopy.email}`}>{contactCopy.email}</a>
+            <br />
+            <a href={contactCopy.phoneHref}>{contactCopy.phone}</a>
+          </p>
+          <p style={{ marginTop: "0.8rem" }}>
             {contactCopy.address[0]}
             <br />
             {contactCopy.address[1]}
           </p>
-          <p style={{ marginTop: "0.8rem" }}>{contactCopy.presence}</p>
         </div>
       </div>
       <dl className="footer-fund">
         {fundFacts.map(([label, value]) => (
           <div key={label}>
             <dt>{label}</dt>
-            <dd>{value}</dd>
+            <dd>
+              {(Array.isArray(value) ? value : [value]).map((line) => (
+                <span key={line}>{line}</span>
+              ))}
+            </dd>
           </div>
         ))}
       </dl>
       <div className="footer-base">
-        <p>© {year} Roger Bravo Advisors Pvt. Ltd.</p>
+        <p>© {year} {contactCopy.company}</p>
         <p>Business Advisory · Crisis Management</p>
       </div>
     </footer>

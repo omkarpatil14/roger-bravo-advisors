@@ -4,7 +4,7 @@ import { RevealOnScroll } from "../components/reveal-on-scroll";
 
 export const metadata = {
   title: "Contact",
-  description: "Contact Roger Bravo Advisors at info@rogerbravo.com. India and Dubai.",
+  description: "Contact Roger Bravo Advisors at info@rogerbravo.com. Mumbai, India.",
 };
 
 export default function ContactPage() {
@@ -23,9 +23,13 @@ export default function ContactPage() {
         <div className="chapter-inner enquiry">
           <RevealOnScroll>
             <p className="eyebrow" id="contact-mail-label">
+              Company
+            </p>
+            <h2 className="display display-sm">{contactCopy.company}</h2>
+            <p className="contact-cin">CIN — {contactCopy.cin}</p>
+            <p className="eyebrow" style={{ marginTop: "2.4rem" }}>
               Email
             </p>
-            <h2 className="display display-sm">Contact us on this email.</h2>
             <a className="contact-mail" href={`mailto:${contactCopy.email}`} data-cursor="Write">
               {contactCopy.email}
             </a>
@@ -54,11 +58,6 @@ export default function ContactPage() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-            </div>
-            <div className="office-card">
-              <span>Dubai</span>
-              <p>{contactCopy.presence}</p>
-              <p className="office-note">Dubai street address — pending client confirmation.</p>
             </div>
           </RevealOnScroll>
         </div>

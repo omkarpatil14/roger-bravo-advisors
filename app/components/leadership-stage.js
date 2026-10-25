@@ -126,11 +126,6 @@ export function LeadershipStage() {
               >
                 <p className="eyebrow">{leader.role}</p>
                 <p className="spotlight-bio">{leader.bio}</p>
-                <ul className="highlight-list">
-                  {leader.highlights.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -145,11 +140,6 @@ export function LeadershipStage() {
             <h2>{item.name}</h2>
             <p className="role">{item.role}</p>
             <p>{item.bio}</p>
-            <ul className="highlight-list">
-              {item.highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
           </article>
         ))}
       </div>

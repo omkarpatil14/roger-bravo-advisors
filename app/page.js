@@ -27,7 +27,6 @@ export default function HomePage() {
     <main id="main">
       <CinematicHero
         video="/videos/corporate-skyline.mp4"
-        eyebrow={hero.eyebrow}
         title={hero.lines}
         lede={hero.lede}
         meta={hero.meta}
@@ -41,30 +40,6 @@ export default function HomePage() {
           </>
         }
       />
-
-      <section className="home-motion-band" aria-label="Roger Bravo capabilities">
-        <div className="motion-signal" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-        </div>
-        <div className="motion-marquee">
-          <div className="motion-marquee-track">
-            {[0, 1].map((copy) => (
-              <div className="motion-marquee-group" aria-hidden={copy === 1} key={copy}>
-                <span>Business advisory</span>
-                <i />
-                <span>Fund raising</span>
-                <i />
-                <span>Crisis management</span>
-                <i />
-                <span>Communications</span>
-                <i />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="chapter" aria-labelledby="why-title">
         <p className="watermark" aria-hidden="true">
@@ -118,14 +93,11 @@ export default function HomePage() {
       </section>
 
       <section className="chapter chapter-tight" aria-labelledby="services-title">
-        <div className="chapter-inner asym">
+        <div className="chapter-inner practice-intro">
           <RevealOnScroll>
-            <p className="eyebrow">{expertise.label}</p>
             <h2 id="services-title" className="display display-md">
               Our practice areas.
             </h2>
-          </RevealOnScroll>
-          <RevealOnScroll className="asym-copy" delay={0.1}>
             <p>{expertise.body}</p>
           </RevealOnScroll>
         </div>
@@ -135,7 +107,7 @@ export default function HomePage() {
               <Link className="service-row" href={`/services#${service.slug}`} data-cursor="Read">
                 <span className="num">0{index + 1}</span>
                 <span className="service-row-title">{service.title}</span>
-                <p>{service.description}</p>
+                {service.description ? <p>{service.description}</p> : null}
                 <span className="service-row-arrow" aria-hidden="true">
                   →
                 </span>

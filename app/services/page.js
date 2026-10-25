@@ -20,7 +20,7 @@ export default function ServicesPage() {
         lede={expertise.body}
         size="md"
         watermark="05"
-        meta={[`${services.length} practices`, "India · Dubai", "Est. 2010"]}
+        meta={[`${services.length} practices`, "India", "Est. 2010"]}
       />
 
       <section className="chapter" aria-labelledby="index-title">

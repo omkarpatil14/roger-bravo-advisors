@@ -46,7 +46,7 @@ These lines are not in the source documents and need client approval:
 - Leadership lede: “Decades in law enforcement, banking and the courts—brought directly to each engagement.”
 - Button labels: “Discuss your mandate”, “Send an enquiry”, “Explore our services”, “Get in touch”, “Send by email”.
 - Home figures: years since 2010 (calendar year minus 2010), industries served (count of `industries` in `app/content.js`), practice areas (count of `services`), and 37+ years of the MD's experience (from his bio). No client counts or revenue claims.
-- Contact: “Dubai street address — pending client confirmation.” The Mumbai office and `info@rogerbravo.com` are confirmed.
+- Contact: the Mumbai office and `info@rogerbravo.com` are confirmed. Dubai is not part of the site.
 - The contact form opens the visitor's email app addressed to `info@rogerbravo.com`. Nothing is stored or sent by the server.
 
 ## Motion

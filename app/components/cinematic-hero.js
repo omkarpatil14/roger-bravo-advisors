@@ -22,6 +22,7 @@ export function CinematicHero({
   video,
   size = "xl",
   titleHref,
+  ledeWide = false,
 }) {
   const root = useRef(null);
   const videoRef = useRef(null);
@@ -99,14 +100,14 @@ export function CinematicHero({
       <svg className="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
           <linearGradient id="line-green" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#1b3054" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#1b3054" stopOpacity="0.75" />
-            <stop offset="1" stopColor="#1b3054" stopOpacity="0" />
+            <stop offset="0" stopColor="#1c8a45" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#1c8a45" stopOpacity="0.75" />
+            <stop offset="1" stopColor="#1c8a45" stopOpacity="0" />
           </linearGradient>
           <linearGradient id="line-orange" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#a68445" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#a68445" stopOpacity="0.8" />
-            <stop offset="1" stopColor="#a68445" stopOpacity="0" />
+            <stop offset="0" stopColor="#e07b1f" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#e07b1f" stopOpacity="0.8" />
+            <stop offset="1" stopColor="#e07b1f" stopOpacity="0" />
           </linearGradient>
         </defs>
         {FLOW_PATHS.map(([d, tone], index) => (
@@ -145,9 +146,9 @@ export function CinematicHero({
         )}
       </motion.div>
       {actions || lede ? (
-        <div className="hero-bottom fade-in">
-          {actions ? <div className="hero-actions">{actions}</div> : <span />}
-          {lede ? <p className="hero-lede">{lede}</p> : null}
+        <div className={`hero-bottom fade-in${ledeWide ? " is-wide" : ""}`}>
+          {actions ? <div className="hero-actions">{actions}</div> : ledeWide ? null : <span />}
+          {lede ? <div className="hero-lede">{lede}</div> : null}
         </div>
       ) : null}
       {meta?.length ? (

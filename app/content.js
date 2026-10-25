@@ -2,28 +2,33 @@ export const navItems = [
   ["About", "/about"],
   ["Services", "/services"],
   ["Leadership", "/leadership"],
-  ["Disclosures", "/disclosures"],
+  ["AIF", "/aif"],
   ["Contact", "/contact"],
 ];
 
 export const fund = {
-  trust: "ROGER BRAVO ALTERNATIVE INVESTMENT FUND",
-  scheme: "ROGER BRAVO SECURED DEVELOPMENT FUND",
+  trust: "Roger Bravo Alternative Investment Fund",
   registration: "IN/AIF2/21-22/0878",
+  intro:
+    "Roger Bravo Alternative Investment Fund is a SEBI-registered Category II Alternative Investment Fund (AIF), bearing Registration No. IN/AIF2/21-22/0878. The Fund aims to provide investors with structured investment opportunities through professionally managed strategies, with a focus on disciplined investment evaluation, risk management, and long-term value creation.",
+  schemesLead: "The Fund has currently floated following two schemes under it:",
+  schemes: [
+    { name: "Roger Bravo Progressive Fund" },
+    { name: "Roger Bravo Secured Development Fund" },
+  ],
 };
 
 export const fundFacts = [
   ["Trust name", fund.trust],
-  ["Scheme name", fund.scheme],
+  ["Scheme name", fund.schemes.map((scheme) => scheme.name)],
   ["SEBI registration no.", fund.registration],
 ];
 
 export const hero = {
-  eyebrow: "Business advisory · Crisis management",
   lines: ["Business and", "financial advisory."],
   lede:
     "Roger Bravo Advisors advises institutions and businesses on new ventures, capital and financial matters.",
-  meta: ["Est. 2010", "India · Dubai", "Scroll to discover"],
+  meta: ["Est. 2010", "India", "Scroll to discover"],
 };
 
 export const manifesto = {
@@ -34,7 +39,7 @@ export const manifesto = {
 };
 
 export const vision =
-  "Our vision is to strengthen our clients’ financial position through well researched strategic advice and strong execution.";
+  "Our vision is to strengthen our client business through discrete & bold initiatives designed with innovation within the framework of regulatory compliances.";
 
 export const nameStory = [
   {
@@ -42,21 +47,17 @@ export const nameStory = [
     tone: "green",
     origin: "Received",
     body: "A term widely used circa 1940 in UK and US military communication to represent “R”, the first letter in received—used to acknowledge a message. Roger essentially implies that your message has been well received.",
-    meaning:
-      "No solution to your needs and problems is possible unless those are well understood by us. Roger is an assurance that we are there to listen, understand and analyse the situation properly before we start working on it.",
   },
   {
     word: "Bravo",
     tone: "saffron",
     origin: "Bold",
     body: "Of Italian origin, meaning bold. In English, it is widely used to express pleasure when someone has done something exceptionally well.",
-    meaning:
-      "A company needs external advisors only in extraordinary circumstances. That is when we rely on our agility and experience to take bold steps and make relentless efforts until we get the desired outcome.",
   },
 ];
 
 export const brandMarks = {
-  logo: "The thumbs-up in Roger and the green colour are an affirmation of us receiving your message well. The tick mark and saffron colour of bravery in Bravo are our assurance that we shall work tirelessly, with all our strength, resources and experience, until we achieve what we are assigned.",
+  logo: "The green thumbs-up in Roger signifies our acknowledgement and understanding of your message. The saffron tick mark in Bravo reflects our courage and commitment to leverage our full potential, resources, and experience to deliver on every objective entrusted to us.",
   tagline: "सह वीर्यम् करवावहै",
   pronunciation: "Saha Viiryam Karavaavahai",
   taglineMeaning:
@@ -78,24 +79,6 @@ export const profile = {
   ],
 };
 
-export const principles = [
-  {
-    mark: "R",
-    title: "Receive",
-    body: "We listen without assumptions and get to the heart of the situation.",
-  },
-  {
-    mark: "B",
-    title: "Consider",
-    body: "We look at the matter carefully, then set out a practical way forward.",
-  },
-  {
-    mark: "✓",
-    title: "Follow through",
-    body: "We stay with the work until the agreed steps are complete.",
-  },
-];
-
 export const expertise = {
   label: "What we do",
   body: "Advice across business, finance and communications.",
@@ -109,7 +92,7 @@ export const services = [
       "New ventures, strategic alliances, B2B access, government liaison and statutory compliance—built around your business objectives.",
     detail: [
       "Infrastructure, marketing and service sectors have expanded rapidly over the past decade, in India and globally. Many MSMEs miss the opportunity because they cannot compete with the giants who win large projects. Our advice is simple: if you can’t beat them, join them. We use our networking and liaison expertise to secure sub-contracts, outsourced orders and after-sales maintenance contracts from large industrial and corporate houses.",
-      "No business can exist by violating government norms or evading taxation. We provide corporate consultancy and liaison with law enforcement agencies and the land and revenue departments of Union and State ministries—so that you stay on the right side of the law, with permissions obtained and reports submitted to the competent authorities on time. We also file responses to investigative or adjudication proceedings, presenting submissions in a comprehensive, transparent and timely manner.",
+      "No business can thrive without adhering to government norms or evading legal compliances. We provide corporate consultancy and liaison services with law enforcement agencies including Union and State Government; land & revenue departments, ensuring timely permissions, regulatory filings, and compliance. We also assist in investigative and adjudication proceedings through comprehensive, transparent, and timely submissions, helping you navigate complex regulatory matters.",
     ],
     groups: [
       {
@@ -137,8 +120,7 @@ export const services = [
     description:
       "Debt syndication and equity funding—from deal structuring and valuation through investor meetings, negotiation and close.",
     detail: [
-      "We help you raise funds from public sector banks, private banks, co-operative banks, NBFCs, AIFs and financial institutions in India and overseas. Our network at the right levels of these institutions lets us channel your requirement to the organisation that is right for you.",
-      "We help you raise equity in the early stages of your business or at expansion stages of the business cycle.",
+      "We facilitate tailored fundraising solutions through public and private sector banks, co-operative banks, NBFCs, Alternative Investment Funds (AIFs), and domestic and international financial institutions. Leveraging our institutional relationships and understanding of lender requirements, we connect businesses with suitable financing partners to structure and secure capital aligned with their financial needs and growth objectives.",
     ],
     groups: [
       {
@@ -186,7 +168,7 @@ export const services = [
     description:
       "Clear-headed counsel for stressed situations, including refinancing, settlements, restructuring, ARC consultancy and promoter funding.",
     detail: [
-      "Our financial crisis and debt management services include, but are not limited to, the following.",
+      "When a business is under financial stress, the way forward has to be practical as well as compliant. We advise on debt refinancing and takeout financing, and we guide one-time settlements and corporate debt restructuring where a formal resolution with lenders is required. The work also covers ARC consultancy, promoter funding and stressed asset funding, together with legal advice on taxation and inquiries from government agencies, so the financial options and the regulatory position are considered together.",
     ],
     groups: [
       {
@@ -210,7 +192,7 @@ export const services = [
     description:
       "Legal strategy, civil and criminal case coordination, international arbitration, mediation, forensic review and corporate fraud investigation.",
     detail: [
-      "Litigation is a necessary part of modern business. Not every dispute has one side right and the other wrong—sometimes circumstances demand a solution that is just and acceptable to all, reached through arbitration or legal suits. With our team of legal experts, we guide you through deliberation and strategy with counsel, and handle court cases, both criminal and civil.",
+      "Litigation is an avoidable part of modern business. Not every dispute has one side right and the other wrong; sometimes circumstances demand a solution that is just and acceptable to all, reached through arbitration or legal suits. With our team of legal experts, we guide you through deliberation and strategy with counsel, and handle court cases, both criminal and civil.",
       "We partner with India Law Alliance, a law firm with experienced lawyers and senior counsel, to provide legal remedies under one roof. Our Managing Director has been appointed as arbitrator in several international arbitration matters involving Indian and foreign companies.",
     ],
     groups: [
@@ -278,12 +260,7 @@ export const leaders = [
     image: "/assets/rajesh-bakshi.webp",
     width: 580,
     height: 980,
-    bio: "Former officer with the Directorate of Enforcement, Ministry of Finance, and later senior management in a leading corporate house. More than 37 years across law enforcement, corporate affairs, liaison, vigilance, investigation and legal compliance.",
-    highlights: [
-      "37+ years of experience",
-      "Former officer, Directorate of Enforcement",
-      "Arbitrator in international arbitration matters",
-    ],
+    bio: "A seasoned professional with over 37 years of experience, including service with the Ministry of Finance and subsequent senior management roles in a leading corporate house. He brings extensive expertise in law enforcement, corporate affairs, government liaison, vigilance, investigations, and legal and regulatory compliance, with additional experience in handling international arbitration matters and complex legal compliance issues.",
   },
   {
     id: "mayank-nandan",
@@ -292,12 +269,7 @@ export const leaders = [
     image: "/assets/mayank-nandan.webp",
     width: 413,
     height: 531,
-    bio: "Over 18 years in investment banking and finance, including Reliance Capital, HDFC Bank and Axis Bank. He leads debt syndication, project finance, structured finance and financial crisis management.",
-    highlights: [
-      "18+ years in banking and finance",
-      "Background verification and forensic audit teams",
-      "Project finance, loan syndication and NPA settlement",
-    ],
+    bio: "A professional with over 18 years of experience in investment banking and financial services, having worked with leading institutions such as Reliance Capital, HDFC Bank, and Axis Bank. His expertise spans debt syndication, project finance, structured finance, and financial crisis management. He holds an MBA in Marketing and a Bachelor of Laws (LL.B.), combining financial acumen with legal and commercial expertise.",
   },
   {
     id: "anupam-dighe",
@@ -307,7 +279,6 @@ export const leaders = [
     width: 900,
     height: 1031,
     bio: "Managing Partner of India Law Alliance, the firm we work with on litigation and arbitration. Advocate of the Bombay High Court and Solicitor of England & Wales, focused on commercial disputes and indirect tax.",
-    highlights: ["Partner firm: India Law Alliance", "Advocate, Bombay High Court", "Solicitor, England & Wales"],
   },
 ];
 
@@ -330,6 +301,8 @@ export const approach = {
 export const contactCopy = {
   eyebrow: "Let’s talk",
   lines: ["Write to the firm."],
+  company: "Roger Bravo Advisors Private Limited",
+  cin: "U74900MH2010PTC208563",
   email: "info@rogerbravo.com",
   phone: "+91 22 79632312",
   phoneHref: "tel:+912279632312",
@@ -339,20 +312,22 @@ export const contactCopy = {
     "https://www.google.com/maps/search/?api=1&query=Inspire+Building+Bharat+Nagar+BKC+Mumbai+400051",
   mapEmbed:
     "https://maps.google.com/maps?q=Inspire+Building+Bharat+Nagar+BKC+Mumbai+400051&z=16&output=embed",
-  presence: "India · Dubai",
+  presence: "India",
 };
 
 export const disclosures = [
   {
-    title: "Investor Charter",
-    file: "/documents/investor-charter.pdf",
+    category: "Investor Charter",
+    documents: [{ title: "Investor Charter", file: "/documents/investor-charter.pdf" }],
   },
   {
-    title: "Grievance Redressal Mechanism",
-    file: "/documents/grievance-redressal-mechanism.pdf",
+    category: "Grievance Redressal",
+    documents: [
+      { title: "Grievance Redressal Mechanism", file: "/documents/grievance-redressal-mechanism.pdf" },
+    ],
   },
   {
-    title: "Investor Complaints Data",
-    file: "/documents/investor-complaints-data.pdf",
+    category: "Complaints Data",
+    documents: [{ title: "Investor Complaints Data", file: "/documents/investor-complaints-data.pdf" }],
   },
 ];

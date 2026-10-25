@@ -67,7 +67,7 @@ export function ServiceAccordion() {
                 <span className="num">0{index + 1}</span>
                 <span className="service-head">
                   <strong>{service.title}</strong>
-                  <span className="service-summary">{service.description}</span>
+                  {service.description ? <span className="service-summary">{service.description}</span> : null}
                 </span>
                 <span className="service-toggle" aria-hidden="true">
                   <span />
@@ -91,18 +91,6 @@ export function ServiceAccordion() {
                     <div className="service-detail">
                       {service.detail.map((paragraph) => (
                         <p key={paragraph.slice(0, 32)}>{paragraph}</p>
-                      ))}
-                    </div>
-                    <div className="service-groups">
-                      {service.groups.map((group) => (
-                        <div key={group.label} className="service-group">
-                          <p className="eyebrow">{group.label}</p>
-                          <ul>
-                            {group.items.map((item) => (
-                              <li key={item}>{item}</li>
-                            ))}
-                          </ul>
-                        </div>
                       ))}
                     </div>
                   </div>

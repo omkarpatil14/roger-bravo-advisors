@@ -40,7 +40,7 @@ export function PinnedSteps({ label, eyebrow, steps, id = "approach" }) {
   }, []);
 
   return (
-    <section ref={root} className="chapter chapter-pin tone-dark steps-section" id={id} aria-labelledby={`${id}-title`}>
+    <section ref={root} className="chapter chapter-pin steps-section" id={id} aria-labelledby={`${id}-title`}>
       <div className="steps-frame">
         <div className="steps-head">
           <p className="eyebrow">{eyebrow}</p>

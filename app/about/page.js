@@ -5,7 +5,6 @@ import {
   fundFacts,
   manifesto,
   nameStory,
-  principles,
   profile,
   vision,
 } from "../content";
@@ -29,22 +28,19 @@ export default function AboutPage() {
         lede={manifesto.lead}
         watermark="RB"
         size="md"
-        meta={["Est. 2010", "India · Dubai", "Business advisory · Crisis management"]}
+        meta={["Est. 2010", "India", "Business advisory · Crisis management"]}
       />
 
       <section className="chapter" aria-labelledby="name-title">
         <p className="watermark" aria-hidden="true">
           01
         </p>
-        <div className="chapter-inner asym">
+        <div className="chapter-inner">
           <RevealOnScroll>
-            <p className="eyebrow">Our name</p>
-            <h2 id="name-title" className="display display-md">
-              The name.
+            <p className="eyebrow">Name narrative</p>
+            <h2 id="name-title" className="display display-sm">
+              The name Roger Bravo indicates two terms:
             </h2>
-          </RevealOnScroll>
-          <RevealOnScroll className="asym-copy" delay={0.1}>
-            <p>{manifesto.body}</p>
           </RevealOnScroll>
         </div>
         <div className="chapter-inner name-grid">
@@ -54,34 +50,9 @@ export default function AboutPage() {
                 <h3 className={`name-word is-${item.tone}`}>{item.word}</h3>
                 <p className="name-origin">Meaning — {item.origin}</p>
                 <p>{item.body}</p>
-                <p className="name-meaning">{item.meaning}</p>
               </article>
             </RevealOnScroll>
           ))}
-        </div>
-      </section>
-
-      <section className="chapter chapter-tight" aria-labelledby="principles-title">
-        <div className="chapter-inner">
-          <RevealOnScroll>
-            <p className="eyebrow">{manifesto.label}</p>
-            <h2 id="principles-title" className="display display-md">
-              How we approach the work.
-            </h2>
-          </RevealOnScroll>
-          <div className="principles">
-            {principles.map((principle, index) => (
-              <RevealOnScroll key={principle.title} delay={index * 0.1}>
-                <article className="principle">
-                  <b aria-hidden="true">{principle.mark}</b>
-                  <div>
-                    <h3>{principle.title}</h3>
-                    <p>{principle.body}</p>
-                  </div>
-                </article>
-              </RevealOnScroll>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -93,7 +64,7 @@ export default function AboutPage() {
               alt="Roger Bravo logo with a thumbs-up in Roger and a tick mark in Bravo"
               width={1800}
               height={437}
-              sizes="(max-width: 900px) 90vw, 440px"
+              sizes="280px"
             />
           </RevealOnScroll>
           <RevealOnScroll delay={0.1}>
@@ -101,7 +72,7 @@ export default function AboutPage() {
             <h2 id="logo-title" className="display display-sm">
               The mark.
             </h2>
-            <p>{brandMarks.logo}</p>
+            <p className="brand-copy">{brandMarks.logo}</p>
           </RevealOnScroll>
         </div>
       </section>
@@ -139,7 +110,11 @@ export default function AboutPage() {
               {fundFacts.map(([label, value]) => (
                 <div key={label}>
                   <dt>{label}</dt>
-                  <dd>{value}</dd>
+                  <dd>
+                    {(Array.isArray(value) ? value : [value]).map((line) => (
+                      <span key={line}>{line}</span>
+                    ))}
+                  </dd>
                 </div>
               ))}
             </dl>

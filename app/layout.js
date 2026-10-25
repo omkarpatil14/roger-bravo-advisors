@@ -21,11 +21,11 @@ export const metadata = {
     template: "%s — Roger Bravo Advisors",
   },
   description:
-    "Roger Bravo Advisors provides strategic business advisory, crisis management, fundraising, legal strategy and corporate liaison across India and Dubai.",
+    "Roger Bravo Advisors provides strategic business advisory, crisis management, fundraising, legal strategy and corporate liaison across India.",
 };
 
 export const viewport = {
-  themeColor: "#F6F1E7",
+  themeColor: "#FBFCFA",
   width: "device-width",
   initialScale: 1,
 };
