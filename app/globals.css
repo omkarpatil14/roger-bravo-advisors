@@ -130,20 +130,6 @@ p, li, dd, address, blockquote, figcaption {
   border-radius: 2px;
 }
 .tone-dark .eyebrow::before { background: var(--accent); }
-.hero .eyebrow {
-  width: fit-content;
-  max-width: 100%;
-  flex-wrap: wrap;
-  margin-bottom: 1.4rem;
-  padding: 0.45rem 0.9rem 0.45rem 0.7rem;
-  border-radius: 999px;
-  color: var(--ink);
-  background: #fff;
-  border: 1px solid var(--line);
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-}
-.hero .eyebrow-sep { margin-right: 0.75rem; }
 .lede { max-width: var(--measure); font-size: clamp(1.05rem, 1.4vw, 1.22rem); }
 .num {
   font-family: var(--display);
@@ -160,6 +146,7 @@ main > .chapter:not(.tone-dark):nth-child(even) {
   background: var(--paper-2);
 }
 .chapter-tight { padding-top: clamp(3.5rem, 8vh, 5.75rem); }
+.chapter-end { padding-block: clamp(2.25rem, 5vh, 3.5rem); }
 .chapter-pin { padding: 0; }
 .chapter-inner { position: relative; z-index: 1; }
 .watermark {
@@ -599,16 +586,22 @@ main > .chapter:not(.tone-dark):nth-child(even) {
 .hero-lede li + li { margin-top: 0.35rem; }
 .fund-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.72fr);
-  gap: 1.75rem 4rem;
-  align-items: end;
+  gap: 1.35rem;
+  max-width: 46rem;
 }
 .fund-intro > p {
   margin: 0;
-  text-align: left;
-  hyphens: manual;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
-.fund-schemes p { margin: 0; text-align: left; hyphens: manual; }
+.fund-schemes p {
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.fund-schemes li { text-align: left; hyphens: manual; }
 .fund-schemes ol { margin-top: 0.9rem; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem 2rem; }
 .hero-foot {
@@ -997,7 +990,7 @@ main > .chapter:not(.tone-dark):nth-child(even) {
 .vision {
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  font-size: clamp(1.55rem, 2.6vw, 2.35rem);
   font-weight: 400;
   font-style: normal;
   letter-spacing: -0.02em;
@@ -1443,28 +1436,8 @@ main > .chapter.chapter-pin.steps-section {
 }
 
 @media (max-width: 560px) {
-  .hero .eyebrow:has(.eyebrow-sep) {
-    display: grid;
-    grid-template-columns: 1.05rem minmax(0, max-content);
-    align-items: center;
-    column-gap: 0.55rem;
-    row-gap: 0.12rem;
-    width: fit-content;
-    max-width: 100%;
-    border-radius: 14px;
-    padding: 0.5rem 0.75rem 0.5rem 0.6rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.06em;
-    line-height: 1.35;
-  }
-  .hero .eyebrow:has(.eyebrow-sep)::before {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    width: 1.05rem;
-    align-self: center;
-  }
-  .hero .eyebrow-sep { display: none; }
-  .hero .eyebrow-part { grid-column: 2; }
+  .fund-intro > p,
+  .fund-schemes p { text-align: left; hyphens: manual; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stat { padding: 1.4rem 0.8rem; }
   .stat:nth-child(odd) { padding-left: 0; }

@@ -12,7 +12,6 @@ export default function ContactPage() {
     <main id="main">
       <CinematicHero
         video="/videos/contact.mp4"
-        eyebrow={contactCopy.eyebrow}
         title={contactCopy.lines}
         size="md"
         watermark="RB"

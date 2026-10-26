@@ -291,10 +291,10 @@ export const approach = {
   label: "How we work",
   eyebrow: "सह वीर्यम् करवावहै",
   steps: [
-    ["Listen", "Understand the context, the people involved, and the matter itself."],
-    ["Analyse", "Review the facts, the risks, and the options."],
-    ["Plan", "Set out a practical path, including the regulatory points."],
-    ["Carry out", "Work through the agreed steps and keep the client informed."],
+    ["Listen", "Understand the context, the real purpose and intent of the client."],
+    ["Analyse", "Review the assignment, predict the risk and deliberate on possibilities."],
+    ["Plan", "Develop a practical & tailored strategy, outline the approaches within the timeline and regulatory framework."],
+    ["Carry Out", "Execute the agreed plan with client's consent and necessary approvals."],
   ],
 };
 

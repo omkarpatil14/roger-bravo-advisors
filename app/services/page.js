@@ -15,7 +15,6 @@ export default function ServicesPage() {
     <main id="main">
       <CinematicHero
         video="/videos/services.mp4"
-        eyebrow={expertise.label}
         title={["What we advise on."]}
         lede={expertise.body}
         size="md"

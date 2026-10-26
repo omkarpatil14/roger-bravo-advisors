@@ -23,7 +23,6 @@ export default function AboutPage() {
     <main id="main">
       <CinematicHero
         video="/videos/about.mp4"
-        eyebrow={manifesto.eyebrow}
         title={["About the firm."]}
         lede={manifesto.lead}
         watermark="RB"
@@ -134,14 +133,9 @@ export default function AboutPage() {
 
       <PinnedSteps label={approach.label} eyebrow={approach.eyebrow} steps={approach.steps} />
 
-      <section className="chapter" aria-labelledby="about-cta">
-        <div className="chapter-inner asym">
-          <h2 id="about-cta" className="display display-md">
-            Your message, well received.
-          </h2>
-          <div className="asym-copy">
-            <MagneticButton href="/services">Explore our services</MagneticButton>
-          </div>
+      <section className="chapter chapter-end" aria-label="Explore our services">
+        <div className="chapter-inner">
+          <MagneticButton href="/services">Explore our services</MagneticButton>
         </div>
       </section>
     </main>

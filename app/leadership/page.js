@@ -12,7 +12,6 @@ export default function LeadershipPage() {
     <main id="main">
       <CinematicHero
         video="/videos/leadership.mp4"
-        eyebrow={leadershipIntro.eyebrow}
         title={["Leadership."]}
         lede="The partners who work on client matters."
         size="md"
