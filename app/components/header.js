@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { LayoutGroup, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -43,15 +42,12 @@ export function Header() {
 
   return (
     <header className={open ? "site-header is-open" : scrolled ? "site-header is-scrolled" : "site-header"}>
-      <Link href="/" className="brand" data-cursor="Open" aria-current={pathname === "/" ? "page" : undefined}>
-        <Image
-          className="logo-mark"
-          src="/assets/roger-bravo-logo.png"
-          alt="Roger Bravo Advisors"
-          width={1800}
-          height={437}
-          priority
-        />
+      <Link href="/" className="brand wordmark" data-cursor="Open" aria-current={pathname === "/" ? "page" : undefined}>
+        <span className="wordmark-name">
+          <span className="wordmark-roger">Roger</span>
+          <span className="wordmark-bravo">Bravo</span>
+        </span>
+        <span className="wordmark-tag">सह वीर्यम् करवावहै</span>
       </Link>
       <LayoutGroup id="primary-nav">
         <nav className="nav-desktop" aria-label="Primary">

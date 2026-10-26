@@ -89,7 +89,7 @@ export const services = [
     slug: "business-advisory",
     title: "Business Advisory & Corporate Liaison",
     description:
-      "New ventures, strategic alliances, B2B access, government liaison and statutory compliance—built around your business objectives.",
+      "New ventures, strategic alliances, B2B access, government liaison and statutory compliance built around your business objectives.",
     detail: [
       "Infrastructure, marketing and service sectors have expanded rapidly over the past decade, in India and globally. Many MSMEs miss the opportunity because they cannot compete with the giants who win large projects. Our advice is simple: if you can’t beat them, join them. We use our networking and liaison expertise to secure sub-contracts, outsourced orders and after-sales maintenance contracts from large industrial and corporate houses.",
       "No business can thrive without adhering to government norms or evading legal compliances. We provide corporate consultancy and liaison services with law enforcement agencies including Union and State Government; land & revenue departments, ensuring timely permissions, regulatory filings, and compliance. We also assist in investigative and adjudication proceedings through comprehensive, transparent, and timely submissions, helping you navigate complex regulatory matters.",
@@ -118,7 +118,7 @@ export const services = [
     slug: "fund-raising",
     title: "Fund Raising & Financial Advisory",
     description:
-      "Debt syndication and equity funding—from deal structuring and valuation through investor meetings, negotiation and close.",
+      "Debt syndication and equity funding from deal structuring and valuation through investor meetings, negotiation and close.",
     detail: [
       "We facilitate tailored fundraising solutions through public and private sector banks, co-operative banks, NBFCs, Alternative Investment Funds (AIFs), and domestic and international financial institutions. Leveraging our institutional relationships and understanding of lender requirements, we connect businesses with suitable financing partners to structure and secure capital aligned with their financial needs and growth objectives.",
     ],

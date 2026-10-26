@@ -100,14 +100,14 @@ export function CinematicHero({
       <svg className="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
           <linearGradient id="line-green" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#1c8a45" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#1c8a45" stopOpacity="0.75" />
-            <stop offset="1" stopColor="#1c8a45" stopOpacity="0" />
+            <stop offset="0" stopColor="#1a8a86" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#1a8a86" stopOpacity="0.75" />
+            <stop offset="1" stopColor="#1a8a86" stopOpacity="0" />
           </linearGradient>
           <linearGradient id="line-orange" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0" stopColor="#e07b1f" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#e07b1f" stopOpacity="0.8" />
-            <stop offset="1" stopColor="#e07b1f" stopOpacity="0" />
+            <stop offset="0" stopColor="#d98a4a" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#d98a4a" stopOpacity="0.8" />
+            <stop offset="1" stopColor="#d98a4a" stopOpacity="0" />
           </linearGradient>
         </defs>
         {FLOW_PATHS.map(([d, tone], index) => (

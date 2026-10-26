@@ -1,4 +1,4 @@
-import { Cormorant_Garamond, Mulish } from "next/font/google";
+import { Cormorant_Garamond, Mulish, Noto_Serif_Devanagari } from "next/font/google";
 import { SiteShell } from "./components/site-shell";
 import "./globals.css";
 
@@ -15,6 +15,13 @@ const mulish = Mulish({
   display: "swap",
 });
 
+const devanagari = Noto_Serif_Devanagari({
+  subsets: ["devanagari"],
+  weight: ["500"],
+  variable: "--font-deva",
+  display: "swap",
+});
+
 export const metadata = {
   title: {
     default: "Roger Bravo Advisors",
@@ -25,14 +32,14 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#FBFCFA",
+  themeColor: "#f8fbfa",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${mulish.variable}`}>
+    <html lang="en" className={`${cormorant.variable} ${mulish.variable} ${devanagari.variable}`}>
       <body>
         <a className="skip-link" href="#main">
           Skip to content
